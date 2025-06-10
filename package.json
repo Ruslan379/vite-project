@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build --base=/vite-project/",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "node ./src/main.js"
   },
   "devDependencies": {
     "vite": "^6.3.5"
@@ -17,6 +18,8 @@
     "basiclightbox": "^5.0.4",
     "canvas": "^3.1.0",
     "chart.js": "^4.4.9",
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
     "skia-canvas": "^2.0.2"
   }
 }

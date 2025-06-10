@@ -25,9 +25,51 @@ import { setupCounter } from './counter.js'
 // setupCounter(document.querySelector('#counter'))
 
 
+//! ---------------------------------------------------------
+const myMessage = "Hello Vite + Java Script!"
+console.log("myMessage:", myMessage);
+
+
+
+//! Lodash
+console.warn("Бібліотека Lodash:");
+//!+- Використання бібліотеки Lodash - var.1 (метод рахує суму двох чисел)
+// const lodash = require('lodash'); //? CommonJS ("type": "commonjs")
+// const sum = lodash.add(10, 5);
+
+//!- Використання бібліотеки Lodash - var.2
+// import { lodash } from 'lodash' //todo: Так не працює з ESM ("type": "module")
+
+// //!+ Використання бібліотеки Lodash - var.3
+import lodash from 'lodash'; //? ESM ("type": "module")
+const sum3 = lodash.add(10, 5);
+console.log("sum3:", sum3); //! 15
+
+// //!+ Використання бібліотеки Lodash - var.4
+import { add, chunk } from 'lodash-es'; //? ESM ("type": "module")
+const sum4 = add(10, 5);
+console.log("sum4:", sum4); //! 15
+console.log(chunk(['a', 'b', 'c', 'd'], 2)); //! [['a', 'b'], ['c', 'd']]
+
+
+
+
+//! nanoid
+console.warn("Бібліотека nanoid:");
+import { nanoid } from 'nanoid' //? ESM ("type": "module",)
+
+console.log("nanoid():", nanoid()); //! yGwbWn-gZ5cfVSeyN_3ms
+console.log("nanoid(5):", nanoid(5)); //! S_8sZ
+console.log("nanoid(10):", nanoid(10)); //! qYpWPzVsVh
+
+const id = nanoid();
+console.log("id:", id); //! LwSYuYYuT74FtNmT5pfl8
+
+
 
 
 //! PNotify
+console.warn("Бібліотека PNotify:");
 import { alert, notice, info, success, error, defaultModules } from '@pnotify/core';
 import * as PNotifyMobile from '@pnotify/mobile';
 import '@pnotify/core/dist/BrightTheme.css';
@@ -102,7 +144,9 @@ btnError.addEventListener('click', () => {
 
 
 
+
 //! Chart.js
+console.warn("Бібліотека Chart.js:");
 import Chart from 'chart.js/auto'
 
 (async function () {
@@ -134,6 +178,9 @@ import Chart from 'chart.js/auto'
 })();
 
 
+
+
+
 //! Basiclightbox
 import * as basicLightbox from 'basiclightbox';
 import 'basiclightbox/dist/basicLightbox.min.css';
@@ -160,3 +207,4 @@ const instance2 = basicLightbox.create(html, {
 });
 
 // instance2.show();
+
